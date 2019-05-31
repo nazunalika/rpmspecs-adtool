@@ -15,6 +15,7 @@ Source0:	https://gp2x.org/adtool/adtool-%{major_version}.%{minor_version}.%{micr
 
 BuildRequires:	openldap-devel
 BuildRequires:	openssl
+BuildRequires:	gcc
 Requires:	openldap
 Requires:	openssl
 
