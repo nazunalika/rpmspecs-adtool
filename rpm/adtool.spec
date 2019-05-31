@@ -27,7 +27,7 @@ Features include user and group creation, deletion, modification, password setti
 %setup -q
 
 %build
-%configure --config-dir=%{_sysconfdir}/%{name}
+%configure --sysconfdir=%{_sysconfdir}/%{name}
 make %{?_smp_mflags} 
 
 %install
