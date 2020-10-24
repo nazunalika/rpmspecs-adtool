@@ -6,7 +6,7 @@
 
 Name:		adtool
 Version:	%{major_version}.%{minor_version}.%{micro_version}
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Active Directory administration utility for Unix
 
 License:	GPLv2
@@ -16,6 +16,9 @@ Source0:	https://gp2x.org/adtool/adtool-%{major_version}.%{minor_version}.%{micr
 BuildRequires:	openldap-devel
 BuildRequires:	openssl
 BuildRequires:	gcc
+BuildRequires:	gcc-c++
+BuildRequires:  make
+BuildRequires:  tar
 Requires:	openldap
 Requires:	openssl
 
@@ -43,6 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Fri Oct 29 2020 Louis Abel <tucklesepk@gmail.com> - 1.3.3-2
+- Fixing failing fedora builds
+
 * Fri May 31 2019 Louis Abel <tucklesepk@gmail.com> - 1.3.3-1
 - Initial release of adtool to copr
 
